@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  body {
+    @apply bg-background text-muted-gray font-sans;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading text-dark;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white rounded-full px-6 py-3 font-medium transition-all duration-300 hover:bg-primary-dark;
+    box-shadow: 8px 8px 0px 0px #000;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-dark border border-dark rounded-full px-6 py-3 font-medium transition-all duration-300;
+    box-shadow: 8px 8px 0px 0px #000;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl p-8 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-2;
+  }
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@layer utilities {
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+
+  .shadow-hard {
+    box-shadow: 8px 8px 0px 0px #000;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
