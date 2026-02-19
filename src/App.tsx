@@ -1,26 +1,21 @@
 
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import LogoCloud from './components/LogoCloud';
-import CustomizedStrategies from './components/CustomizedStrategies';
-import FeatureCards from './components/FeatureCards';
-import Testimonials from './components/Testimonials';
-import OurProcess from './components/OurProcess';
-import FinalCTA from './components/FinalCTA';
+import Home from './components/Home';
+import Services from './components/Services';
 import Footer from './components/Footer';
+import ScrollToHash from './components/ScrollToHash';
 
 function App() {
   return (
     <div className="min-h-screen bg-background">
+      <ScrollToHash />
       <Navbar />
       <main>
-        <Hero />
-        <LogoCloud />
-        <CustomizedStrategies />
-        <FeatureCards />
-        <Testimonials />
-        <OurProcess />
-        <FinalCTA />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/services" element={<Services />} />
+        </Routes>
       </main>
       <Footer />
     </div>

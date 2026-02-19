@@ -73,7 +73,7 @@ const Hero = () => {
                 <motion.div
                     animate={{ y: [0, 5, 0] }}
                     transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                    className="absolute bottom-[18%] left-[62%] -translate-x-1/2 bg-pastel-yellow p-3 rounded-[24px] shadow-hard z-20 font-bold text-[13px] px-8 py-3.5 border border-dark text-dark/80 whitespace-nowrap scale-90 md:scale-100"
+                    className="absolute bottom-[13%] left-[60%] -translate-x-1/2 bg-pastel-yellow p-3 rounded-[24px] shadow-hard z-20 font-bold text-[12px] px-5 py-2.5 border border-dark text-dark/80 whitespace-nowrap scale-90 md:scale-100"
                 >
                     Get Your Free Strategy Session
                 </motion.div>

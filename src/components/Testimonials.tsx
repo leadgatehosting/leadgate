@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Star } from 'lucide-react';
 
@@ -44,13 +44,13 @@ const Testimonials = () => {
     const [visibleCount, setVisibleCount] = useState(typeof window !== 'undefined' && window.innerWidth < 1024 ? 1 : 2);
 
     // Update visible count on resize
-    useState(() => {
+    useEffect(() => {
         const handleResize = () => {
             setVisibleCount(window.innerWidth < 1024 ? 1 : 2);
         };
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
-    });
+    }, []);
 
     const totalPages = Math.ceil(testimonials.length / visibleCount);
 
