@@ -27,9 +27,11 @@ const FeatureCards = () => {
                             <p className="text-white/90 text-sm md:text-base mb-6 md:mb-8 max-w-[280px] font-medium leading-relaxed">
                                 Every decision is backed by data and analytics to maximize your ROI.
                             </p>
-                            <button className="bg-white text-[#E04644] px-6 py-2.5 rounded-full font-bold shadow-hard border border-dark text-sm hover:translate-x-[2px] hover:translate-y-[2px] transition-transform">
-                                Get Started
-                            </button>
+                            <a href="tel:+919172902094" className="w-fit">
+                                <button className="bg-white text-[#E04644] px-6 py-2.5 rounded-full font-bold shadow-hard border border-dark text-sm hover:translate-x-[2px] hover:translate-y-[2px] transition-transform">
+                                    Get Started
+                                </button>
+                            </a>
                         </div>
                         <div className="mt-auto pointer-events-none flex justify-center pb-4 md:pb-0">
                             <img src="/sticker_results_clean.png" alt="Results" className="w-full h-auto object-contain max-h-[240px] md:max-h-[320px] mix-blend-multiply brightness-[1.1] scale-110" />

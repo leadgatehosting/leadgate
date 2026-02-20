@@ -22,9 +22,11 @@ const Hero = () => {
                 </p>
 
                 <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mb-12 md:mb-14">
-                    <button className="btn-primary text-base px-10 md:px-12 py-3.5 md:py-4">
-                        Strategy Session
-                    </button>
+                    <a href="tel:+919172902094" className="w-fit">
+                        <button className="btn-primary text-base px-10 md:px-12 py-3.5 md:py-4">
+                            Strategy Session
+                        </button>
+                    </a>
                 </div>
 
                 <div className="flex items-center gap-5 md:gap-7 bg-[#E8E1D5] py-3.5 px-6 md:py-5 md:px-9 rounded-lg w-fit shadow-hard border border-dark mx-auto md:mx-0 mb-8 md:mb-14 mt-10 md:mt-14">
@@ -70,13 +72,9 @@ const Hero = () => {
                     </div>
                 </motion.div>
 
-                <motion.div
-                    animate={{ y: [0, 5, 0] }}
-                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                    className="absolute bottom-[13%] left-[60%] -translate-x-1/2 bg-pastel-yellow p-3 rounded-[24px] shadow-hard z-20 font-bold text-[12px] px-5 py-2.5 border border-dark text-dark/80 whitespace-nowrap scale-90 md:scale-100"
-                >
+                <a href="tel:+919172902094" className="absolute bottom-[13%] left-[60%] -translate-x-1/2 bg-pastel-yellow p-3 rounded-[24px] shadow-hard z-20 font-bold text-[12px] px-5 py-2.5 border border-dark text-dark/80 whitespace-nowrap scale-90 md:scale-100 hover:translate-x-[calc(-50%+2px)] hover:translate-y-[2px] transition-transform">
                     Get Your Free Strategy Session
-                </motion.div>
+                </a>
 
                 {/* Scattered Decorative Icons - Hidden or scaled on mobile */}
                 <motion.div animate={{ y: [0, 8, 0] }} transition={{ duration: 3, repeat: Infinity }} className="absolute -top-6 right-10 md:-top-12 md:right-20 w-8 h-8 md:w-10 md:h-10 bg-white rounded-full shadow-lg flex items-center justify-center text-primary text-lg md:text-xl font-bold">★</motion.div>

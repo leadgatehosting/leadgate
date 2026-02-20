@@ -139,9 +139,11 @@ const CustomizedStrategies = () => {
                             <p className="text-gray-500 text-sm md:text-base mb-6 md:mb-8 leading-relaxed max-w-[480px]">
                                 {activeStrategy.description}
                             </p>
-                            <button className="btn-primary text-base px-10 py-3.5">
-                                Let's Talk!
-                            </button>
+                            <a href="tel:+919172902094" className="w-fit">
+                                <button className="btn-primary text-base px-10 py-3.5">
+                                    Let's Talk!
+                                </button>
+                            </a>
                         </motion.div>
                     </AnimatePresence>
                 </div>

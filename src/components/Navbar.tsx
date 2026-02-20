@@ -22,9 +22,11 @@ const Navbar = () => {
                 </div>
 
                 <div className="flex items-center gap-4">
-                    <button className="hidden sm:block btn-primary py-2 px-6 text-sm">
-                        Get a Free Consultation
-                    </button>
+                    <a href="tel:+919172902094" className="hidden sm:block">
+                        <button className="btn-primary py-2 px-6 text-sm w-full">
+                            Get a Free Consultation
+                        </button>
+                    </a>
 
                     {/* Mobile Toggle */}
                     <button
@@ -44,9 +46,11 @@ const Navbar = () => {
                     <Link to="/#process" onClick={() => setIsOpen(false)} className="font-medium text-dark">Process</Link>
                     <Link to="/#why-us" onClick={() => setIsOpen(false)} className="font-medium text-dark">Why Us</Link>
                     <hr className="border-gray-100" />
-                    <button className="btn-primary py-3 w-full text-center">
-                        Get a Free Consultation
-                    </button>
+                    <a href="tel:+919172902094" className="w-full">
+                        <button className="btn-primary py-3 w-full text-center">
+                            Get a Free Consultation
+                        </button>
+                    </a>
                 </div>
             )}
         </nav>

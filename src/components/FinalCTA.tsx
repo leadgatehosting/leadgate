@@ -48,9 +48,11 @@ const FinalCTA = () => {
                     <p className="text-white/80 text-base md:text-xl mb-10 md:mb-14 max-w-[600px] mx-auto font-medium">
                         Get a free strategy session with our experts and start optimizing your marketing efforts.
                     </p>
-                    <button className="bg-white text-dark hover:bg-white/95 transition-all rounded-full px-10 md:px-14 py-4 md:py-5 text-base md:text-lg font-bold shadow-xl active:scale-95 group relative overflow-hidden">
-                        <span className="relative z-10">Strategy Session</span>
-                    </button>
+                    <a href="tel:+919172902094" className="w-fit mx-auto">
+                        <button className="bg-white text-dark hover:bg-white/95 transition-all rounded-full px-10 md:px-14 py-4 md:py-5 text-base md:text-lg font-bold shadow-xl active:scale-95 group relative overflow-hidden">
+                            <span className="relative z-10">Strategy Session</span>
+                        </button>
+                    </a>
                 </div>
             </div>
         </section>
