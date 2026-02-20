@@ -62,7 +62,7 @@ const OurProcess = () => {
                             transition={{ duration: 0.6, delay: index * 0.1 }}
                             className="group"
                         >
-                            <div className="border-t-2 border-dark/90 md:border-dark/60 py-6 md:py-10 flex flex-row justify-between items-start md:items-center gap-4">
+                            <div className="border-t-2 border-dark/60 md:border-dark/40 py-6 md:py-10 flex flex-row justify-between items-start md:items-center gap-4 hover:bg-dark/5 transition-colors rounded-xl px-4 -mx-4">
                                 <div className="flex-1 md:pr-10">
                                     <h3 className="text-2xl md:text-[40px] font-light text-[#E04644] mb-4 md:mb-3 leading-tight flex flex-wrap items-center gap-x-2 tracking-tight">
                                         <span className="relative inline-block px-1">
@@ -84,7 +84,7 @@ const OurProcess = () => {
                             </div>
                         </motion.div>
                     ))}
-                    <div className="border-t-2 border-dark/90 md:border-dark/60 w-full"></div>
+                    <div className="border-t-2 border-dark/60 md:border-dark/40 w-full"></div>
                 </div>
             </div>
         </section>

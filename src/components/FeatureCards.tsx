@@ -5,7 +5,7 @@ const FeatureCards = () => {
         <section id="why-us" className="py-16 md:py-24 px-6 bg-[#FAF8F3]">
             <div className="max-w-[1440px] mx-auto">
                 <div className="text-center mb-12 md:mb-16">
-                    <span className="inline-block px-4 py-1.5 bg-white border border-dark rounded-full text-xs md:text-sm font-bold mb-4 shadow-hard text-dark/90">
+                    <span className="inline-block px-4 py-1.5 bg-white border border-dark/70 rounded-full text-xs md:text-sm font-bold mb-4 shadow-static text-dark/90 cursor-default">
                         The Edge You Need
                     </span>
                     <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-dark">Marketing That Delivers Real Impact</h2>
@@ -17,8 +17,8 @@ const FeatureCards = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
                     {/* Card 1: Results-Driven */}
                     <motion.div
-                        whileHover={{ y: -10 }}
-                        className="p-6 md:p-10 rounded-[32px] md:rounded-[40px] text-white flex flex-col h-auto md:h-[600px] shadow-hard border-2 border-dark overflow-hidden relative isolate"
+                        whileHover={{ y: -10, boxShadow: '12px 12px 0px 0px rgba(11, 15, 25, 0.82)' }}
+                        className="p-6 md:p-10 rounded-[32px] md:rounded-[40px] text-white flex flex-col h-auto md:h-[600px] shadow-hard border-2 border-dark/70 overflow-hidden relative isolate transition-all duration-300"
                         style={{ backgroundColor: '#E04644' }}
                     >
                         <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_120%,rgba(0,0,0,0.15),transparent_70%)] pointer-events-none" />
@@ -28,7 +28,7 @@ const FeatureCards = () => {
                                 Every decision is backed by data and analytics to maximize your ROI.
                             </p>
                             <a href="tel:+919172902094" className="w-fit">
-                                <button className="bg-white text-[#E04644] px-6 py-2.5 rounded-full font-bold shadow-hard border border-dark text-sm hover:translate-x-[2px] hover:translate-y-[2px] transition-transform">
+                                <button className="bg-white text-[#E04644] px-6 py-2.5 rounded-full font-bold shadow-hard border border-dark/70 text-sm hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all active:scale-95">
                                     Get Started
                                 </button>
                             </a>
@@ -40,8 +40,8 @@ const FeatureCards = () => {
 
                     {/* Card 2: Customized Solutions */}
                     <motion.div
-                        whileHover={{ y: -10 }}
-                        className="p-6 md:p-10 rounded-[32px] md:rounded-[40px] text-dark flex flex-col h-auto md:h-[600px] shadow-hard border-2 border-dark overflow-hidden relative isolate"
+                        whileHover={{ y: -10, boxShadow: '12px 12px 0px 0px rgba(11, 15, 25, 0.82)' }}
+                        className="p-6 md:p-10 rounded-[32px] md:rounded-[40px] text-dark flex flex-col h-auto md:h-[600px] shadow-hard border-2 border-dark/70 overflow-hidden relative isolate transition-all duration-300"
                         style={{ backgroundColor: '#FFF3A6' }}
                     >
                         <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_-20%,rgba(255,255,255,0.6),transparent_60%)] pointer-events-none" />
@@ -58,8 +58,8 @@ const FeatureCards = () => {
 
                     {/* Card 3: Automation Experts */}
                     <motion.div
-                        whileHover={{ y: -10 }}
-                        className="p-6 md:p-10 rounded-[32px] md:rounded-[40px] text-dark flex flex-col h-auto md:h-[600px] shadow-hard border-2 border-dark overflow-hidden relative isolate"
+                        whileHover={{ y: -10, boxShadow: '12px 12px 0px 0px rgba(11, 15, 25, 0.82)' }}
+                        className="p-6 md:p-10 rounded-[32px] md:rounded-[40px] text-dark flex flex-col h-auto md:h-[600px] shadow-hard border-2 border-dark/70 overflow-hidden relative isolate transition-all duration-300"
                         style={{ backgroundColor: '#E3DFD4' }}
                     >
                         <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_100%_100%,rgba(0,0,0,0.05),transparent_50%)] pointer-events-none" />

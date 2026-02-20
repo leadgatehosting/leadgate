@@ -7,7 +7,7 @@ const Services = () => {
             description:
                 "Strategic calendar planning, consistent posting, profile optimisation and performance improvements to build strong brand presence across platforms.",
             footer: "Complete Social Media Management",
-            icon: "/services page top logo/social media  managment.png",
+            icon: "https://leadgatewebsite.s3.ap-southeast-2.amazonaws.com/services+page+top+logo/social+media++managment.png",
             color: "#0041C8"
         },
         {
@@ -15,7 +15,7 @@ const Services = () => {
             description:
                 "Optimised Google Business profile management including updates, reviews, keyword targeting and local SEO enhancements for better search visibility.",
             footer: "Google Business Optimisation",
-            icon: "/services page top logo/gmb management.png",
+            icon: "https://leadgatewebsite.s3.ap-southeast-2.amazonaws.com/services+page+top+logo/gmb+management.png",
             color: "#A6452F"
         },
         {
@@ -23,7 +23,7 @@ const Services = () => {
             description:
                 "Meta and Google ad campaign setup with structured targeting, budget optimisation and performance-driven adjustments to maximise conversions.",
             footer: "Paid Campaign Strategy & Execution",
-            icon: "/services page top logo/paid campegin.png",
+            icon: "https://leadgatewebsite.s3.ap-southeast-2.amazonaws.com/services+page+top+logo/paid+campegin.png",
             color: "#004d00"
         },
         {
@@ -31,7 +31,7 @@ const Services = () => {
             description:
                 "Professional 20–30 second reel production including scripting, editing, transitions and engaging visuals built for reach and retention.",
             footer: "Reel Creation (Standard)",
-            icon: "/services page top logo/reel creation short video.png",
+            icon: "https://leadgatewebsite.s3.ap-southeast-2.amazonaws.com/services+page+top+logo/reel+creation+short+video.png",
             color: "#e62e00"
         },
         {
@@ -39,7 +39,7 @@ const Services = () => {
             description:
                 "AI-powered reel production with voice integration, motion graphics and dynamic text animation for modern, high-impact storytelling.",
             footer: "Reel Creation (AI Enhanced)",
-            icon: "/services page top logo/reel creation .png",
+            icon: "https://leadgatewebsite.s3.ap-southeast-2.amazonaws.com/services+page+top+logo/reel+creation+.png",
             color: "#8c0085"
         },
         {
@@ -47,7 +47,7 @@ const Services = () => {
             description:
                 "Custom poster designs aligned with your brand, platform-optimised sizing and strong call-to-action placement for impactful communication.",
             footer: "Poster & Creative Design",
-            icon: "/services page top logo/poster design.png",
+            icon: "https://leadgatewebsite.s3.ap-southeast-2.amazonaws.com/services+page+top+logo/poster+design.png",
             color: "#008A9A"
         },
         {
@@ -55,7 +55,7 @@ const Services = () => {
             description:
                 "Landing pages, e-commerce systems, AI chatbot integrations, SEO-ready builds and secure web solutions designed for scalable growth.",
             footer: "Web Development & Solutions",
-            icon: "/services page top logo/web development.png",
+            icon: "https://leadgatewebsite.s3.ap-southeast-2.amazonaws.com/services+page+top+logo/web+development.png",
             color: "#CB5100"
         },
         {
@@ -63,7 +63,7 @@ const Services = () => {
             description:
                 "Optional add-ons including shoots, CRM handling, advanced creatives, sales follow-ups and required third-party tool integrations.",
             footer: "Additional Services",
-            icon: "/services page top logo/additional services.png",
+            icon: "https://leadgatewebsite.s3.ap-southeast-2.amazonaws.com/services+page+top+logo/additional+services.png",
             color: "#019292"
         }
     ];

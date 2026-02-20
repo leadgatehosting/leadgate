@@ -65,14 +65,31 @@ const Testimonials = () => {
         setPage((prev) => (prev - 1 + totalPages) % totalPages);
     };
 
+    // Auto-slide effect
+    useEffect(() => {
+        const interval = setInterval(() => {
+            nextSet();
+        }, 5000); // 5 seconds
+        return () => clearInterval(interval);
+    }, [totalPages, page]); // Reset interval when page or totalPages changes
+
+    const handleDragEnd = (_event: any, info: any) => {
+        const swipeThreshold = 50;
+        if (info.offset.x < -swipeThreshold) {
+            nextSet();
+        } else if (info.offset.x > swipeThreshold) {
+            prevSet();
+        }
+    };
+
     const visibleTestimonials = testimonials.slice(page * visibleCount, (page * visibleCount) + visibleCount);
 
     return (
-        <section className="py-16 md:py-24 px-6 bg-[#FAF8F3] overflow-hidden">
+        <section id="testimonials" className="py-16 md:py-24 px-6 bg-[#FAF8F3] overflow-hidden">
             <div className="max-w-[1440px] mx-auto">
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-16 gap-6">
                     <div>
-                        <span className="inline-block px-4 py-2 bg-white border-2 border-dark rounded-full text-xs md:text-sm font-bold mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] text-dark">
+                        <span className="inline-block px-4 py-2 bg-white border-2 border-dark/70 rounded-full text-xs md:text-sm font-bold mb-4 text-dark cursor-default shadow-static">
                             What Our Clients Say
                         </span>
                         <h2 className="text-4xl md:text-6xl font-bold max-w-full md:max-w-[600px] text-dark tracking-tight mt-2">
@@ -82,20 +99,25 @@ const Testimonials = () => {
                     <div className="flex gap-4">
                         <button
                             onClick={prevSet}
-                            className="w-12 h-12 md:w-14 md:h-14 rounded-full border-2 border-dark bg-white flex items-center justify-center hover:translate-x-[2px] hover:translate-y-[2px] transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-x-[4px] active:translate-y-[4px]"
+                            className="w-12 h-12 md:w-14 md:h-14 rounded-full border-2 border-dark/70 bg-white flex items-center justify-center hover:translate-x-[2px] hover:translate-y-[2px] transition-all shadow-[4px_4px_0px_0px_rgba(11,15,25,0.7)] active:shadow-none active:translate-x-[4px] active:translate-y-[4px] hover:bg-gray-50"
                         >
                             <span className="text-xl">←</span>
                         </button>
                         <button
                             onClick={nextSet}
-                            className="w-12 h-12 md:w-14 md:h-14 rounded-full border-2 border-dark bg-[#E04644] text-white flex items-center justify-center hover:translate-x-[2px] hover:translate-y-[2px] transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-x-[4px] active:translate-y-[4px]"
+                            className="w-12 h-12 md:w-14 md:h-14 rounded-full border-2 border-dark/70 bg-[#E04644] text-white flex items-center justify-center hover:translate-x-[2px] hover:translate-y-[2px] transition-all shadow-[4px_4px_0px_0px_rgba(11,15,25,0.7)] active:shadow-none active:translate-x-[4px] active:translate-y-[4px] hover:bg-[#D03634]"
                         >
                             <span className="text-xl">→</span>
                         </button>
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10">
+                <motion.div
+                    className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10"
+                    drag="x"
+                    dragConstraints={{ left: 0, right: 0 }}
+                    onDragEnd={handleDragEnd}
+                >
                     <AnimatePresence mode="wait">
                         {visibleTestimonials.map((t, i) => (
                             <motion.div
@@ -105,17 +127,17 @@ const Testimonials = () => {
                                 exit={{ opacity: 0, x: -20 }}
                                 transition={{ duration: 0.4, delay: i * 0.1 }}
                                 whileHover={{ y: -5 }}
-                                className={`${t.bgColor} p-6 md:p-8 rounded-[32px] md:rounded-[40px] border-2 border-dark shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] relative flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-8`}
+                                className={`${t.bgColor} p-6 md:p-8 rounded-[32px] md:rounded-[40px] border-2 border-dark/70 shadow-[8px_8px_0px_0px_rgba(11,15,25,0.7)] relative flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-8 cursor-grab active:cursor-grabbing hover:-translate-y-1 hover:shadow-[10px_10px_0px_0px_rgba(11,15,25,0.8)] transition-all duration-300`}
                             >
                                 {/* Initials Avatar */}
-                                <div className="w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-full border-2 border-dark bg-white flex items-center justify-center shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                                <div className="w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-full border-2 border-dark/70 bg-white flex items-center justify-center shadow-[4px_4px_0px_0px_rgba(11,15,25,0.7)]">
                                     <span className="text-xl md:text-2xl font-black text-dark">
                                         {t.name.split(' ').map(n => n[0]).join('')}
                                     </span>
                                 </div>
 
                                 {/* Content */}
-                                <div className="flex flex-col flex-1">
+                                <div className="flex flex-col flex-1 pointer-events-none select-none">
                                     <div className="flex gap-1 mb-2">
                                         {[...Array(t.stars)].map((_, i) => (
                                             <Star key={i} className="fill-[#E04644] text-[#E04644] w-4 h-4 md:w-5 md:h-5" />
@@ -134,7 +156,7 @@ const Testimonials = () => {
                             </motion.div>
                         ))}
                     </AnimatePresence>
-                </div>
+                </motion.div>
             </div>
         </section>
     );

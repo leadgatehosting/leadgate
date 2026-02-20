@@ -19,13 +19,21 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-primary text-white rounded-full px-6 py-3 font-medium transition-all duration-300 hover:bg-primary-dark;
-    box-shadow: 8px 8px 0px 0px #000;
+    @apply bg-primary text-white rounded-full px-6 py-3 font-medium transition-all duration-300 hover:bg-primary-dark hover:-translate-y-1.5;
+    box-shadow: 8px 8px 0px 0px rgba(11, 15, 25, 0.7);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 12px 12px 0px 0px rgba(11, 15, 25, 0.85);
   }
 
   .btn-secondary {
-    @apply bg-white text-dark border border-dark rounded-full px-6 py-3 font-medium transition-all duration-300;
-    box-shadow: 8px 8px 0px 0px #000;
+    @apply bg-white text-dark border border-dark/70 rounded-full px-6 py-3 font-medium transition-all duration-300 hover:-translate-y-1.5;
+    box-shadow: 8px 8px 0px 0px rgba(11, 15, 25, 0.7);
+  }
+
+  .btn-secondary:hover {
+    box-shadow: 12px 12px 0px 0px rgba(11, 15, 25, 0.85);
   }
 
   .card {
@@ -45,7 +53,21 @@
   }
 
   .shadow-hard {
-    box-shadow: 8px 8px 0px 0px #000;
+    @apply transition-all duration-300;
+    box-shadow: 8px 8px 0px 0px rgba(11, 15, 25, 0.7);
+  }
+
+  .shadow-hard:hover {
+    @apply -translate-y-1;
+    box-shadow: 10px 10px 0px 0px rgba(11, 15, 25, 0.82);
+  }
+
+  .shadow-static {
+    box-shadow: 4px 4px 0px 0px rgba(11, 15, 25, 0.7);
+  }
+
+  .shadow-static-lg {
+    box-shadow: 8px 8px 0px 0px rgba(11, 15, 25, 0.7);
   }
 }
 

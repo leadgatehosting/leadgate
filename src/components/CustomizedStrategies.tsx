@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const strategies = [
@@ -49,6 +49,23 @@ const CustomizedStrategies = () => {
         setPage([page + newDirection, newDirection]);
     };
 
+    // Auto-slide effect
+    useEffect(() => {
+        const interval = setInterval(() => {
+            paginate(1);
+        }, 5000); // 5 seconds
+        return () => clearInterval(interval);
+    }, [activeIndex]); // Reset interval when activeIndex changes
+
+    const handleDragEnd = (_event: any, info: any) => {
+        const swipeThreshold = 50;
+        if (info.offset.x < -swipeThreshold) {
+            paginate(1);
+        } else if (info.offset.x > swipeThreshold) {
+            paginate(-1);
+        }
+    };
+
     const variants = {
         enter: (direction: number) => ({
             x: direction > 0 ? 100 : -100,
@@ -73,7 +90,7 @@ const CustomizedStrategies = () => {
         <section id="services" className="py-12 md:py-16 px-6 max-w-[1440px] mx-auto overflow-hidden">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-12 gap-6">
                 <div>
-                    <span className="inline-block px-5 py-1.5 bg-white border border-dark rounded-full text-xs md:text-[13px] font-bold mb-4 shadow-hard text-dark/90">
+                    <span className="inline-block px-5 py-1.5 bg-white border border-dark/70 rounded-full text-xs md:text-[13px] font-bold mb-4 text-dark/90 cursor-default shadow-static">
                         Marketing Solutions That Deliver Results
                     </span>
                     <h2 className="text-4xl md:text-5xl font-bold max-w-full md:max-w-[800px] leading-tight">
@@ -84,13 +101,13 @@ const CustomizedStrategies = () => {
                 <div className="flex gap-4">
                     <button
                         onClick={() => paginate(-1)}
-                        className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-dark flex items-center justify-center hover:bg-dark hover:text-white transition-all shadow-hard"
+                        className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-dark/70 flex items-center justify-center hover:bg-dark hover:text-white transition-all shadow-[6px_6px_0px_0px_rgba(11,15,25,0.7)] hover:-translate-y-1 active:translate-y-0"
                     >
                         ←
                     </button>
                     <button
                         onClick={() => paginate(1)}
-                        className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-dark bg-primary text-white flex items-center justify-center hover:bg-primary-dark transition-all shadow-hard"
+                        className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-dark/70 bg-primary text-white flex items-center justify-center hover:bg-primary-dark transition-all shadow-[6px_6px_0px_0px_rgba(11,15,25,0.7)] hover:-translate-y-1 active:translate-y-0"
                     >
                         →
                     </button>
@@ -102,23 +119,28 @@ const CustomizedStrategies = () => {
                 <div className="relative h-[350px] md:h-[480px] order-2 md:order-1 mt-8 md:mt-0 max-w-[600px] mx-auto w-full">
                     {/* Primary Image: 4:5 Portrait Ratio */}
                     <div
-                        className="absolute right-0 top-0 w-[65%] aspect-[4/5] rounded-[40px] overflow-hidden border-2 border-dark z-10"
-                        style={{ boxShadow: '12px 8px 0px 0px #000' }}
+                        className="absolute right-0 top-0 w-[65%] aspect-[4/5] rounded-[40px] overflow-hidden border-2 border-dark/70 z-10 hover:scale-[1.02] transition-transform"
+                        style={{ boxShadow: '12px 8px 0px 0px rgba(11,15,25,0.7)' }}
                     >
                         <img src={strategies[0].mainImage} alt="Marketing Strategy" className="w-full h-full object-cover" />
                     </div>
 
                     {/* Secondary Image: 3:2 Landscape Ratio */}
                     <div
-                        className="absolute left-0 bottom-4 w-[75%] aspect-[3/2] rounded-[40px] overflow-hidden border-2 border-dark z-20"
-                        style={{ boxShadow: '12px 8px 0px 0px #000' }}
+                        className="absolute left-0 bottom-4 w-[75%] aspect-[3/2] rounded-[40px] overflow-hidden border-2 border-dark/70 z-20 hover:scale-[1.02] transition-transform"
+                        style={{ boxShadow: '12px 8px 0px 0px rgba(11,15,25,0.7)' }}
                     >
                         <img src={strategies[0].subImage} alt="Strategy Analytics" className="w-full h-full object-cover" />
                     </div>
                 </div>
 
                 {/* Content Section */}
-                <div className="order-1 md:order-2">
+                <motion.div
+                    className="order-1 md:order-2"
+                    drag="x"
+                    dragConstraints={{ left: 0, right: 0 }}
+                    onDragEnd={handleDragEnd}
+                >
                     <AnimatePresence initial={false} custom={direction} mode="wait">
                         <motion.div
                             key={activeTab}
@@ -131,12 +153,13 @@ const CustomizedStrategies = () => {
                                 x: { type: "spring", stiffness: 300, damping: 30 },
                                 opacity: { duration: 0.4 }
                             }}
+                            className="cursor-grab active:cursor-grabbing"
                         >
-                            <h3 className="text-3xl md:text-4xl font-bold mb-4 text-dark leading-tight">
+                            <h3 className="text-3xl md:text-4xl font-bold mb-4 text-dark leading-tight select-none">
                                 <span className="inline-block md:whitespace-nowrap">{activeStrategy.title.split(' ').slice(0, Math.ceil(activeStrategy.title.split(' ').length / 2)).join(' ')}</span> <br className="hidden md:block" />
                                 <span className="inline-block md:whitespace-nowrap">{activeStrategy.title.split(' ').slice(Math.ceil(activeStrategy.title.split(' ').length / 2)).join(' ')}</span>
                             </h3>
-                            <p className="text-gray-500 text-sm md:text-base mb-6 md:mb-8 leading-relaxed max-w-[480px]">
+                            <p className="text-gray-500 text-sm md:text-base mb-6 md:mb-8 leading-relaxed max-w-[480px] select-none">
                                 {activeStrategy.description}
                             </p>
                             <a href="tel:+919172902094" className="w-fit">
@@ -146,7 +169,7 @@ const CustomizedStrategies = () => {
                             </a>
                         </motion.div>
                     </AnimatePresence>
-                </div>
+                </motion.div>
             </div>
 
             {/* Strategy Tabs */}
