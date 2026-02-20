@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Services from './components/Services';
 import Footer from './components/Footer';
 import ScrollToHash from './components/ScrollToHash';
+import ChatBot from './components/ChatBot';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         </Routes>
       </main>
       <Footer />
+      <ChatBot />
     </div>
   );
 }
