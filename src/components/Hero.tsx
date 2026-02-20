@@ -32,8 +32,8 @@ const Hero = () => {
                 <div className="flex items-center gap-5 md:gap-7 bg-[#E8E1D5] py-3.5 px-6 md:py-5 md:px-9 rounded-lg w-fit shadow-hard border border-dark mx-auto md:mx-0 mb-8 md:mb-14 mt-10 md:mt-14">
                     <div className="flex -space-x-4">
                         {[1, 2, 3, 4].map((i) => (
-                            <div key={i} className="w-10 h-10 md:w-14 md:h-14 rounded-full border-2 border-[#E8E1D5] overflow-hidden">
-                                <img src={`https://i.pravatar.cc/100?img=${i + 20}`} alt="user" className="w-full h-full object-cover" />
+                            <div key={i} className="w-10 h-10 md:w-14 md:h-14 rounded-full overflow-hidden">
+                                <img src={`/client logos/client ${i}.png`} alt={`client ${i}`} className="w-full h-full object-contain" />
                             </div>
                         ))}
                     </div>

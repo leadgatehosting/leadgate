@@ -4,36 +4,39 @@ import { Star } from 'lucide-react';
 
 const testimonials = [
     {
-        name: 'Aditi Sharma',
-        role: 'Marketing Head at Mumbai Decors',
-        content: "LeadGate transformed our online presence. Our inquiry rate for luxury home interiors doubled in just three months!",
-        image: 'https://i.pravatar.cc/150?u=aditi',
+        name: "Shruti Chhachwale",
+        role: "Founder of SpaceEdge Interiors",
+        content: "Before working with LeadGate, a lot of our follow-ups and marketing tasks were scattered. Their systems helped us organize leads better and saved us a lot of manual effort. The team understands how interior design businesses actually work in India.",
         stars: 5,
-        bgColor: 'bg-[#EFE6D8]'
+        bgColor: "bg-[#EFE6D8]"
     },
     {
-        name: 'Rohan Malhotra',
-        role: 'Founder of Delhi Eats',
-        content: 'The automation tools provided by LeadGate saved us hours of manual follow-ups. Their team really knows the Indian market.',
-        image: 'https://i.pravatar.cc/150?u=rohan',
-        stars: 5,
-        bgColor: 'bg-[#FFF3A6]'
+        name: "Pravin Ghorphade",
+        role: "Owner of The Laptop Mall",
+        content: "LeadGate helped us improve our local visibility and manage inquiries more smoothly. Their approach was practical, not over-promising, which I really appreciated. We saw better quality customers after their campaigns.",
+        stars: 4,
+        bgColor: "bg-[#FFF3A6]"
     },
     {
-        name: 'Vikram Iyer',
-        role: 'Director, Bangalore Tech Solutions',
-        content: 'Excellent ROI! Their data-driven approach helped us scale our B2B lead generation across the country effortlessly.',
-        image: 'https://i.pravatar.cc/150?u=vikram',
+        name: "Kirti Raut",
+        role: "Owner of Aalay Interiors",
+        content: "What stood out was how patiently the team understood our brand and target audience. LeadGate helped us present our work more professionally online without forcing unnecessary trends.",
         stars: 5,
-        bgColor: 'bg-[#C0D9FA]'
+        bgColor: "bg-[#C0D9FA]"
     },
     {
-        name: 'Priya Verma',
-        role: 'COO, Jaipur Artisans',
-        content: 'They understood our brand values perfectly. The customized strategies they implemented helped us reach a global audience.',
-        image: 'https://i.pravatar.cc/150?u=priya',
+        name: "Vikrant Tadge",
+        role: "Owner of Green Nest Agro Tourism",
+        content: "We wanted more genuine inquiries without spending time on constant coordination. LeadGate’s marketing support helped us reach the right audience and reduced a lot of manual follow-up work.",
         stars: 5,
-        bgColor: 'bg-[#ECEFF1]'
+        bgColor: "bg-[#ECEFF1]"
+    },
+    {
+        name: "Shubham Kamble",
+        role: "Owner of SK Cleaning Services",
+        content: "Managing service leads was getting difficult as our business grew. LeadGate helped us streamline inquiries and improve our online presence with simple, effective systems.",
+        stars: 4,
+        bgColor: "bg-[#EFE6D8]"
     }
 ];
 
