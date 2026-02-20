@@ -77,9 +77,6 @@ const Hero = () => {
                         Get Your Free Strategy Session
                     </a>
 
-                    {/* Scattered Decorative Icons - Hidden or scaled on mobile */}
-                    <motion.div animate={{ y: [0, 8, 0] }} transition={{ duration: 3, repeat: Infinity }} className="absolute -top-6 right-10 md:-top-12 md:right-20 w-8 h-8 md:w-10 md:h-10 bg-white rounded-full shadow-lg flex items-center justify-center text-primary text-lg md:text-xl font-bold">★</motion.div>
-
                     {/* SVG Decorative Lines - Opacity reduced more on mobile */}
                     <svg className="absolute -z-10 -top-10 -left-10 md:-top-20 md:-left-20 w-[120%] h-[120%] opacity-[0.05] md:opacity-[0.07]" viewBox="0 0 400 400">
                         <path d="M 50 100 Q 150 50 250 150 T 350 100" fill="none" stroke="currentColor" strokeWidth="1" strokeDasharray="10,10" className="text-dark" />
