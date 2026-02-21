@@ -22,7 +22,7 @@ const Navbar = () => {
                 </div>
 
                 <div className="flex items-center gap-4">
-                    <a href="tel:+919172902094" className="hidden sm:block">
+                    <a href="https://wa.me/919172902094?text=Hi%2C%20I%20am%20interested%20in%20exploring%20LeadGate%20services.%20Please%20share%20more%20details." target="_blank" rel="noopener noreferrer" className="hidden sm:block">
                         <button className="btn-primary py-2 px-6 text-sm w-full">
                             Get a Free Consultation
                         </button>
@@ -46,7 +46,7 @@ const Navbar = () => {
                     <Link to="/#process" onClick={() => setIsOpen(false)} className="font-medium text-dark">Process</Link>
                     <Link to="/#why-us" onClick={() => setIsOpen(false)} className="font-medium text-dark">Why Us</Link>
                     <hr className="border-gray-100" />
-                    <a href="tel:+919172902094" className="w-full">
+                    <a href="https://wa.me/919172902094?text=Hi%2C%20I%20am%20interested%20in%20exploring%20LeadGate%20services.%20Please%20share%20more%20details." target="_blank" rel="noopener noreferrer" className="w-full">
                         <button className="btn-primary py-3 w-full text-center">
                             Get a Free Consultation
                         </button>

@@ -162,7 +162,7 @@ const CustomizedStrategies = () => {
                             <p className="text-gray-500 text-sm md:text-base mb-6 md:mb-8 leading-relaxed max-w-[480px] select-none">
                                 {activeStrategy.description}
                             </p>
-                            <a href="tel:+919172902094" className="w-fit">
+                            <a href="https://wa.me/919172902094?text=Hi%2C%20I%20am%20interested%20in%20exploring%20LeadGate%20services.%20Please%20share%20more%20details." target="_blank" rel="noopener noreferrer" className="w-fit">
                                 <button className="btn-primary text-base px-10 py-3.5">
                                     Let's Talk!
                                 </button>

@@ -27,7 +27,7 @@ const FeatureCards = () => {
                             <p className="text-white/90 text-sm md:text-base mb-6 md:mb-8 max-w-[280px] font-medium leading-relaxed">
                                 Every decision is backed by data and analytics to maximize your ROI.
                             </p>
-                            <a href="tel:+919172902094" className="w-fit">
+                            <a href="https://wa.me/919172902094?text=Hi%2C%20I%20am%20interested%20in%20exploring%20LeadGate%20services.%20Please%20share%20more%20details." target="_blank" rel="noopener noreferrer" className="w-fit">
                                 <button className="bg-white text-[#E04644] px-6 py-2.5 rounded-full font-bold shadow-hard border border-dark/70 text-sm hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all active:scale-95">
                                     Get Started
                                 </button>

@@ -16,7 +16,7 @@ const Footer = () => {
                     <div>
                         <h4 className="font-bold text-dark mb-4 md:mb-6">Contact</h4>
                         <ul className="space-y-3 md:space-y-4 text-sm text-muted-gray">
-                            <li><a href="tel:+919172902094" className="hover:text-primary transition-colors">+91 91729 02094</a></li>
+                            <li><a href="https://wa.me/919172902094?text=Hi%2C%20I%20am%20interested%20in%20exploring%20LeadGate%20services.%20Please%20share%20more%20details." target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">+91 91729 02094</a></li>
                             <li><a href="mailto:leadgate.hq@gmail.com" className="hover:text-primary transition-colors">leadgate.hq@gmail.com</a></li>
                         </ul>
                     </div>

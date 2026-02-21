@@ -23,7 +23,7 @@ const Hero = () => {
                     </p>
 
                     <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mb-12 md:mb-14">
-                        <a href="tel:+919172902094" className="w-fit">
+                        <a href="https://wa.me/919172902094?text=Hi%2C%20I%20am%20interested%20in%20exploring%20LeadGate%20services.%20Please%20share%20more%20details." target="_blank" rel="noopener noreferrer" className="w-fit">
                             <button className="btn-primary text-base px-10 md:px-12 py-3.5 md:py-4">
                                 Strategy Session
                             </button>
@@ -76,7 +76,9 @@ const Hero = () => {
                     </motion.div>
 
                     <motion.a
-                        href="tel:+919172902094"
+                        href="https://wa.me/919172902094?text=Hi%2C%20I%20am%20interested%20in%20exploring%20LeadGate%20services.%20Please%20share%20more%20details."
+                        target="_blank"
+                        rel="noopener noreferrer"
                         whileHover={{
                             scale: 1.1,
                             y: -5,
