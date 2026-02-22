@@ -194,11 +194,16 @@ const OurProcess = () => {
                                     style={{
                                         background: step.bg,
                                         color: step.textColor,
+                                        animation: `op-float 3s ease-in-out infinite alternate ${index * 0.4}s`
                                     }}
-                                    initial={{ opacity: 0, y: 30 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true, margin: '-40px' }}
-                                    transition={{ duration: 0.45, delay: 0.05 }}
+                                    initial={{ opacity: 0, y: 50, rotate: -6 }}
+                                    whileInView={{ opacity: 1, y: 0, rotate: 0 }}
+                                    viewport={{ once: true, margin: '-20px' }}
+                                    transition={{
+                                        duration: 0.35,
+                                        delay: index * 0.03,
+                                        ease: [0.34, 1.56, 0.64, 1] // Bouncy snap-into-place
+                                    }}
                                     onClick={() => toggleMobile(index)}
                                 >
                                     {/* Sticker */}
@@ -464,10 +469,10 @@ const OurProcess = () => {
                 /* Sticker */
                 .op-sticker {
                     position: absolute;
-                    top: -38px;
-                    right: -18px;
-                    width: 76px;
-                    height: 76px;
+                    top: -46px;
+                    right: -22px;
+                    width: 88px;
+                    height: 88px;
                     pointer-events: none;
                     z-index: 10;
                     transform: rotate(var(--sticker-rot, 0deg));
@@ -559,7 +564,7 @@ const OurProcess = () => {
                         display: flex;
                         flex-direction: column;
                         align-items: center;
-                        gap: 0;
+                        gap: 0px;
                     }
 
                     .op-header {
@@ -582,6 +587,8 @@ const OurProcess = () => {
                         overflow: visible;
                         cursor: pointer;
                         transition: box-shadow 0.3s ease;
+                        padding: 12px 16px;
+                        transform-origin: top center;
                     }
 
                     .op-mobile-card.op-mobile-expanded {
@@ -605,10 +612,10 @@ const OurProcess = () => {
 
                     .op-mobile-sticker {
                         position: absolute;
-                        top: -30px;
-                        right: -12px;
-                        width: 64px;
-                        height: 64px;
+                        top: -36px;
+                        right: -16px;
+                        width: 72px;
+                        height: 72px;
                         pointer-events: none;
                         z-index: 10;
                         filter: drop-shadow(0 3px 8px rgba(0,0,0,0.2));
@@ -622,7 +629,7 @@ const OurProcess = () => {
 
                     /* Always visible: title row */
                     .op-mobile-top {
-                        padding: 1.2rem 1.2rem;
+                        padding: 0.6rem 0.8rem;
                         position: relative;
                         z-index: 2;
                         display: flex;
@@ -687,16 +694,22 @@ const OurProcess = () => {
                         font-size: 0.8rem;
                     }
 
-                    /* Arrow between cards */
                     .op-arrow {
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        padding: 0.6rem 0;
+                        padding: 0;
+                        margin: -14px 0;
+                        z-index: 11;
+                        pointer-events: none;
                     }
 
                     .op-arrow-svg {
                         opacity: 0.35;
+                    }
+                    @keyframes op-float {
+                        0% { transform: rotate(-1.5deg); }
+                        100% { transform: rotate(1.5deg); }
                     }
                 }
             `}</style>
