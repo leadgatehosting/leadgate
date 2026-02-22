@@ -1,5 +1,6 @@
 
 import { Routes, Route } from 'react-router-dom';
+import { ReactLenis } from 'lenis/react';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Services from './components/Services';
@@ -9,18 +10,20 @@ import ChatBot from './components/ChatBot';
 
 function App() {
   return (
-    <div className="min-h-screen bg-background">
-      <ScrollToHash />
-      <Navbar />
-      <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/services" element={<Services />} />
-        </Routes>
-      </main>
-      <Footer />
-      <ChatBot />
-    </div>
+    <ReactLenis root>
+      <div className="min-h-screen bg-background">
+        <ScrollToHash />
+        <Navbar />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/services" element={<Services />} />
+          </Routes>
+        </main>
+        <Footer />
+        <ChatBot />
+      </div>
+    </ReactLenis>
   );
 }
 
