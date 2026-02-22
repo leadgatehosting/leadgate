@@ -97,7 +97,7 @@ const Services = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: index * 0.08 }}
-                        className="bg-[#F3F3F3] rounded-2xl px-8 pb-8 pt-0 text-center flex flex-col items-center shadow-sm hover:shadow-xl transition-all duration-500"
+                        className="bg-[#FDFDFD] rounded-2xl px-8 pb-8 pt-0 text-center flex flex-col items-center border-[2.5px] border-[#1A1A2E] shadow-hard transition-all duration-500"
                     >
                         {/* Icon Block */}
                         <div className="w-full h-64 relative mb-4">

@@ -154,8 +154,8 @@ const OurProcess = () => {
                                             className="op-divider"
                                             style={{
                                                 background: step.textColor === '#ffffff'
-                                                    ? 'rgba(255,255,255,0.2)'
-                                                    : 'rgba(0,0,0,0.1)',
+                                                    ? 'rgba(255,255,255,0.45)'
+                                                    : 'rgba(0,0,0,0.2)',
                                             }}
                                         />
                                         <ul className="op-bullets">
@@ -190,7 +190,7 @@ const OurProcess = () => {
                             <div key={step.number}>
                                 <motion.div
                                     className={`op-mobile-card ${isExpanded ? 'op-mobile-expanded' : ''}`}
-                                    whileHover={{ y: -5, boxShadow: '8px 8px 0px 0px rgba(11, 15, 25, 0.82)' }}
+                                    whileHover={{ y: -5, boxShadow: '10px 10px 0px 0px rgba(11, 15, 25, 0.85)' }}
                                     style={{
                                         background: step.bg,
                                         color: step.textColor,
@@ -233,8 +233,8 @@ const OurProcess = () => {
                                             className="op-divider"
                                             style={{
                                                 background: step.textColor === '#ffffff'
-                                                    ? 'rgba(255,255,255,0.2)'
-                                                    : 'rgba(0,0,0,0.1)',
+                                                    ? 'rgba(255,255,255,0.45)'
+                                                    : 'rgba(0,0,0,0.2)',
                                             }}
                                         />
                                         <ul className="op-bullets">
@@ -401,7 +401,7 @@ const OurProcess = () => {
                 .op-card {
                     width: 230px;
                     border-radius: 20px;
-                    border: 2px solid rgba(11, 15, 25, 0.7);
+                    border: 2.5px solid #1A1A2E;
                     cursor: pointer;
                     user-select: none;
                     position: relative;
@@ -579,11 +579,9 @@ const OurProcess = () => {
                         width: 100%;
                         max-width: 320px;
                         border-radius: 18px;
-                        border: 2px solid rgba(11, 15, 25, 0.7);
+                        border: 2.5px solid #1A1A2E;
                         position: relative;
-                        box-shadow:
-                            0 4px 20px rgba(0,0,0,0.12),
-                            0 8px 32px rgba(0,0,0,0.06);
+                        box-shadow: 8px 8px 0px 0px rgba(11, 15, 25, 0.85);
                         overflow: visible;
                         cursor: pointer;
                         transition: box-shadow 0.3s ease;
@@ -592,9 +590,7 @@ const OurProcess = () => {
                     }
 
                     .op-mobile-card.op-mobile-expanded {
-                        box-shadow:
-                            0 8px 30px rgba(0,0,0,0.18),
-                            0 12px 40px rgba(0,0,0,0.08);
+                        box-shadow: 10px 10px 0px 0px rgba(11, 15, 25, 0.85);
                     }
 
                     .op-mobile-card::before {
